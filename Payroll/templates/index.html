@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Employee List</h1>
+    <div class="header">
+        <img src="{{ url_for('static', filename='company_logo.png') }}" alt="Company Logo" class="logo">
+        <h1>Employee List</h1>
+    </div>
     <ul>
         {% for employee in employees %}
             <li>{{ employee.full_name }} - Salary: ${{ employee.get_salary() }}</li>

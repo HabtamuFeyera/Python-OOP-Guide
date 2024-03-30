@@ -1,40 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
+    background-color: #007bff; /* Change background color to blue */
+    color: #fff; /* Set text color to white for better contrast */
 }
-
-h1, h2 {
-    color: #333;
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #0056b3; /* Darker shade of blue */
+    padding: 15px; /* Increase padding for larger block size */
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
+.logo {
+    width: 60px; /* Increase logo size */
+    height: 60px; /* Ensure the height matches the width for a circular shape */
+    border-radius: 50%; /* Set border-radius to 50% to create a circle */
+    margin-right: 15px; /* Add some space between the logo and the heading */
 }
-
-li {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"], input[type="number"], select {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+h1 {
+    font-size: 28px; /* Increase font size for the heading */
+    margin: 0; /* Remove default margin to ensure the heading aligns properly */
 }
