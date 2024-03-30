@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add Employee</h1>
+    <form action="{{ url_for('add_employee') }}" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="employee_type">Employee Type:</label>
+        <select id="employee_type" name="employee_type" required>
+            <option value="fulltime">Full-time</option>
+            <option value="hourly">Hourly</option>
+        </select><br><br>
+
+        <div id="fulltime_fields" class="employee-fields">
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary"><br><br>
+        </div>
+
+        <div id="hourly_fields" class="employee-fields">
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate"><br><br>
+
+            <label for="worked_hours">Worked Hours:</label>
+            <input type="number" id="worked_hours" name="worked_hours"><br><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Toggle visibility of salary or rate/worked hours fields based on employee type selection
+        document.getElementById('employee_type').addEventListener('change', function() {
+            var employeeType = this.value;
+            var fulltimeFields = document.getElementById('fulltime_fields');
+            var hourlyFields = document.getElementById('hourly_fields');
+
+            if (employeeType === 'fulltime') {
+                fulltimeFields.style.display = 'block';
+                hourlyFields.style.display = 'none';
+            } else if (employeeType === 'hourly') {
+                fulltimeFields.style.display = 'none';
+                hourlyFields.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
