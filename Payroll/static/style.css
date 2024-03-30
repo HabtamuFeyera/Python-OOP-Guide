@@ -1,23 +1,75 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #007bff; /* Change background color to blue */
-    color: #fff; /* Set text color to white for better contrast */
+    padding: 0;
+    background-color: #f7f9fc;
 }
+
 .header {
-    display: flex;
-    align-items: center;
-    background-color: #0056b3; /* Darker shade of blue */
-    padding: 15px; /* Increase padding for larger block size */
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+
 .logo {
-    width: 60px; /* Increase logo size */
-    height: 60px; /* Ensure the height matches the width for a circular shape */
-    border-radius: 50%; /* Set border-radius to 50% to create a circle */
-    margin-right: 15px; /* Add some space between the logo and the heading */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
+
 h1 {
-    font-size: 28px; /* Increase font size for the heading */
-    margin: 0; /* Remove default margin to ensure the heading aligns properly */
+    font-size: 32px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
 }

@@ -13,7 +13,7 @@ payroll = Payroll()
 def write_to_csv(filename, data):
     with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(['First Name', 'Last Name', 'Salary', 'Rate', 'Worked Hours'])  # Write header row
+        writer.writerow(['First Name', 'Last Name', 'position','age','level','Salary', 'Rate', 'Worked Hours'])  # Write header row
         writer.writerows(data)
 
 # Function to read employee data from CSV file
